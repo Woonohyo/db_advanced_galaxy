@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import next.galaxy.GalaxyMain;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +25,9 @@ public class FrontController extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		rm = (RequestMapping)getServletContext().getAttribute(ServletContextLoader.DEFAULT_REQUEST_MAPPING);
+		
+		GalaxyMain galaxy = new GalaxyMain();
+		galaxy.startGalaxy();
 	}
 
 	@Override

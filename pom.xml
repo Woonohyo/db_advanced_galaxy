@@ -55,6 +55,13 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+
 		<!-- logger -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>

@@ -3,8 +3,9 @@ package core.mvc;
 import java.util.HashMap;
 import java.util.Map;
 
-import next.controller.ListController;
-import next.controller.ShowController;
+import next.controller.AttackController;
+import next.controller.GalaxyController;
+import next.controller.ResetController;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,9 +15,9 @@ public class RequestMapping {
 	private Map<String, Controller> mappings = new HashMap<String, Controller>();
 	
 	public void initMapping() {
-		mappings.put("/list.next", new ListController());
-		mappings.put("/show.next", new ShowController());
-		mappings.put("/form.next", new ForwardController("form.jsp"));
+		mappings.put("/galaxy.next", new GalaxyController());
+		mappings.put("/reset.next", new ResetController());
+		mappings.put("/attack.next", new AttackController());
 		
 		logger.info("Initialized Mapping Completed!");
 	}
